@@ -1,0 +1,29 @@
+#! /bin/sh
+
+echo 'update'
+echo 'upgrade'
+
+echo ""
+echo "# add Repositories"
+for tap in `brew tap`
+do
+  echo "tap $tap"
+done
+
+
+echo ""
+echo "# install folmura"
+for folmura in `brew list`
+do
+  echo "install $folmura"
+done
+
+echo ""
+echo "# install cask"
+for cask in `brew cask list`
+do
+  echo "cask install $cask"
+done
+
+echo ""
+echo "cleanup"
